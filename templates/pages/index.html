@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+
+{% block nav %}
+  {% include "../components/nav.html" %}
+
+   <div class="">
+
+  {% include "../components/messages.html" %}
+
+   </div>
+{% endblock %}
+
+{% block content %}
+<h1 class="text-white font-sans text-center text-4xl font-bold mt-10 mb-10" >Welcome to my website!</h1>
+{% endblock %}
+
+{% block footer %}
+  {% include "../components/footers.html" %}
+{% endblock %}

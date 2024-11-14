@@ -1,0 +1,27 @@
+{% extends "pages/index.html" %}
+
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+
+<div class="max-w-lg mx-auto mb-10 pt-20">
+    <!-- Profile Card -->
+    <div class="relative flex flex-col items-center gap-4 p-6 bg-gradient-to-b from-gray-800 to-gray-900 rounded-xl shadow-lg text-center text-white mt-10">
+        
+        <!-- Edit Profile Button -->
+        <button class="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-md shadow-md hover:bg-blue-700 transition">
+            <a href="{% url 'editprofile' %}">EditProfile</a>
+        </button>
+
+        <!-- Profile Image and Info -->
+        <img class="w-20 h-20 rounded-full object-cover border-4 border-gray-700 shadow-lg mt-6" src="{{ user.profile.profile_image }}" />
+        <h1 class="text-3xl font-semibold">@{{ user.profile.display_name_or_username }}</h1>
+        <div class="text-gray-300 text-lg mt-2">
+            <p class="text-justify" >{{ user.profile.bio }}</p>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+

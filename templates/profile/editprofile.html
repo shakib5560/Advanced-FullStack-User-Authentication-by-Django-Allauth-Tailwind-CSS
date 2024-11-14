@@ -1,0 +1,47 @@
+{% extends "pages/index.html" %}
+
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+
+<div class="max-w-lg mx-auto mb-10 pt-20">
+    <!-- Edit Profile Form Card -->
+    <div class="flex flex-col items-center gap-4 p-6 bg-gradient-to-b from-gray-800 to-gray-900 rounded-xl shadow-lg text-white mt-10">
+        
+        <h1 class="text-3xl font-semibold mb-4">Edit Profile</h1>
+        
+        <!-- Form -->
+        <form method="POST" enctype="multipart/form-data" class="w-full flex flex-col gap-4 text-left">
+            {% csrf_token %}
+            <!-- Profile Image -->
+            <div class="flex flex-col items-center gap-2">
+                <label class="text-lg">Profile Image</label>
+                <input type="file" name="profile_image" accept="image/*" class="w-full px-3 py-2 rounded-md bg-gray-700 text-gray-300 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            </div>
+            
+            <!-- Display Name -->
+            <div class="flex flex-col gap-2">
+                <label for="display_name" class="text-lg">Display Name</label>
+                <input type="text" id="display_name" name="display_name" value="{{ user.profile.display_name_or_username }}" class="w-full px-3 py-2 rounded-md bg-gray-700 text-gray-300 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            </div>
+            
+            <!-- Bio -->
+            <div class="flex flex-col gap-2">
+                <label for="bio" class="text-lg">Bio</label>
+                <textarea id="bio" name="bio" rows="3" class="w-full px-3 py-2 rounded-md bg-gray-700 text-gray-300 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">{{ user.profile.bio }}</textarea>
+            </div>
+            
+            <!-- Save Button -->
+            <button type="submit" class="w-full bg-blue-600 text-white px-3 py-2 rounded-md shadow-md hover:bg-blue-700 transition">
+                Save Changes
+            </button>
+        </form>
+        
+        <!-- Cancel Button -->
+        <a href="{% url "profile" %}" class="text-gray-300 text-sm mt-2 hover:underline">Cancel</a>
+    </div>
+</div>
+
+
+
+{% endblock %}
