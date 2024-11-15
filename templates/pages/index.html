@@ -12,7 +12,80 @@
 {% endblock %}
 
 {% block content %}
-<h1 class="text-white font-sans text-center text-4xl font-bold mt-10 mb-10" >Welcome to my website!</h1>
+
+ <!-- Hero Section -->
+ <section class="bg-gray-800 min-h-screen flex items-center">
+  <div class="container mx-auto px-6 text-center">
+      <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">
+          Secure Your Application with <span class="text-blue-500">AuthSys</span>
+      </h1>
+      <p class="text-lg md:text-xl text-gray-400 mb-8">
+          A complete authentication solution for your full-stack projects. Simple. Secure. Reliable.
+      </p>
+      <div>
+          <a href="#features" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-medium transition-all">
+              Explore Features
+          </a>
+      </div>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section id="features" class="py-16 bg-gray-900">
+  <div class="container mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-12">Features</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Feature 1 -->
+          <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+              <div class="text-blue-500 text-4xl mb-4">
+                  🔒
+              </div>
+              <h3 class="text-xl font-semibold text-white mb-2">Secure Authentication</h3>
+              <p class="text-gray-400">
+                  Protect your users with the latest security standards including OAuth, JWT, and encryption.
+              </p>
+          </div>
+          <!-- Feature 2 -->
+          <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+              <div class="text-blue-500 text-4xl mb-4">
+                  ⚡
+              </div>
+              <h3 class="text-xl font-semibold text-white mb-2">Lightning Fast</h3>
+              <p class="text-gray-400">
+                  Experience minimal latency with optimized authentication flows and scalable backend systems.
+              </p>
+          </div>
+          <!-- Feature 3 -->
+          <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+              <div class="text-blue-500 text-4xl mb-4">
+                  🌍
+              </div>
+              <h3 class="text-xl font-semibold text-white mb-2">Global Reach</h3>
+              <p class="text-gray-400">
+                  Support for multi-language and multi-region applications, ensuring accessibility for everyone.
+              </p>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-16 bg-gray-800">
+  <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+          Ready to Secure Your App?
+      </h2>
+      <p class="text-lg text-gray-400 mb-8">
+          Start building a safe and secure user experience with AuthSys today.
+      </p>
+      <div>
+          <a href="#signup" class="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 rounded-lg font-medium transition-all">
+              Get Started
+          </a>
+      </div>
+  </div>
+</section>
+
 {% endblock %}
 
 {% block footer %}
